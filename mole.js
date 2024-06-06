@@ -12,13 +12,23 @@ let gamestarted = false;
 
 window.onload = function(){
     document.getElementById("startgame").addEventListener('click', startgame);
-
+    document.getElementById("inst").addEventListener('click', showinstructions);
     function startgame(){
         if(!gamestarted){
             gamestarted=true;
             setgame();
         }
     }
+}
+
+function showinstructions(){
+    var instructions = document.getElementById('gameInstructions');
+  if (instructions.style.display === 'none') {
+    instructions.style.display = 'block';
+  } else {
+    instructions.style.display = 'none';
+  }
+
 }
 
 
